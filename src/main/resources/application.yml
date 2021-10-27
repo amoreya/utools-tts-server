@@ -23,9 +23,9 @@ spring:
 
 #百度API的鉴权信息
 baidu:
-  app-id: 24987364
-  api-Key: KpZCsgwg0rswUloHOS9sgVZ4
-  secret-Key: iKCXjzatn03ZiMtfSiZC26lu2BNuNH8L
+  app-id:
+  api-Key:
+  secret-Key:
 
 #系统每天的可用次数
 tts:
