@@ -1,0 +1,35 @@
+#服务器配置
+server:
+  port: 2323
+  servlet:
+    context-path: /baidutts
+  tomcat:
+    uri-encoding: UTF-8
+    accesslog:
+      enabled: true
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 30000
+
+#百度API的鉴权信息
+baidu:
+  app-id: 24987364
+  api-Key: KpZCsgwg0rswUloHOS9sgVZ4
+  secret-Key: iKCXjzatn03ZiMtfSiZC26lu2BNuNH8L
+
+#系统每天的可用次数
+tts:
+  app-total: 5000
+  user-total: 50
+
+
