@@ -12,25 +12,27 @@ public class BaseinfoDto implements Serializable {
     /**
      * 插件ID
      * */
-    public String plugin_id;
-
+    private String plugin_id;
 
     /**
      * uTools 用户的 access_token
      * */
-    public String access_token;
-
+    private String access_token;
 
     /**
      * 时间戳（秒），误差需小于 10 分钟
      * */
-    public String timestamp;
-
+    private String timestamp;
 
     /**
      * 签名
      * */
-    public String sign;
+    private String sign;
+
+    /**
+     * 插件的secret
+     * */
+    private String secret;
 
     public String getPlugin_id() {
         return plugin_id;
@@ -64,13 +66,22 @@ public class BaseinfoDto implements Serializable {
         this.sign = sign;
     }
 
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
+
     @Override
     public String toString() {
-        return "baseinfoDto{" +
+        return "BaseinfoDto{" +
                 "plugin_id='" + plugin_id + '\'' +
                 ", access_token='" + access_token + '\'' +
                 ", timestamp='" + timestamp + '\'' +
                 ", sign='" + sign + '\'' +
+                ", secret='" + secret + '\'' +
                 '}';
     }
 }

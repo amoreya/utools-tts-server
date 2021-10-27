@@ -1,12 +1,9 @@
 package com.huny.baidutts.util;
 
-import org.apache.http.client.HttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
@@ -26,6 +23,7 @@ public class HttpUtil {
         BufferedReader in = null;
         try {
             String urlNameString = url + "?" + param;
+            LOGGER.info("请求的URL为：" + urlNameString);
             URL realUrl = new URL(urlNameString);
             // 打开和URL之间的连接
             URLConnection connection = realUrl.openConnection();
@@ -49,9 +47,9 @@ public class HttpUtil {
             while ((line = in.readLine()) != null) {
                 result += line;
             }
+            LOGGER.info("返回值为："+result);
         } catch (Exception e) {
-            System.out.println("发送GET请求出现异常！" + e);
-            e.printStackTrace();
+            LOGGER.info("发送GET请求出现异常！" + e);
         }
         // 使用finally块来关闭输入流
         finally {
