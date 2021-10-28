@@ -16,9 +16,9 @@ import java.io.Serializable;
 @Component
 public class BaiDuTtsAuthConfig implements Serializable {
 
-    public  String appId;
-    public  String apiKey;
-    public  String secretKey;
+    private   String appId;
+    private  String apiKey;
+    private  String secretKey;
 
     public String getAppId() {
         return appId;

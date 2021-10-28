@@ -36,19 +36,10 @@ public class TtsDto implements Serializable {
     private String  per ;
 
     /**
-     * 请求发起者的IP
+     * 请求发起者的UTOOLS用户的token
      * */
-    private String plugin_id;
+    private String accessToken;
 
-    /**
-     * 请求发起者的UTOOLS的ID
-     * */
-    private String access_token;
-
-    /**
-     * 插件的secret
-     * */
-    private String secret;
 
     public String getTex() {
         return tex;
@@ -90,28 +81,12 @@ public class TtsDto implements Serializable {
         this.per = per;
     }
 
-    public String getPlugin_id() {
-        return plugin_id;
+    public String getAccessToken() {
+        return accessToken;
     }
 
-    public void setPlugin_id(String plugin_id) {
-        this.plugin_id = plugin_id;
-    }
-
-    public String getAccess_token() {
-        return access_token;
-    }
-
-    public void setAccess_token(String access_token) {
-        this.access_token = access_token;
-    }
-
-    public String getSecret() {
-        return secret;
-    }
-
-    public void setSecret(String secret) {
-        this.secret = secret;
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 
     @Override
@@ -122,9 +97,7 @@ public class TtsDto implements Serializable {
                 ", pit='" + pit + '\'' +
                 ", vol='" + vol + '\'' +
                 ", per='" + per + '\'' +
-                ", plugin_id='" + plugin_id + '\'' +
-                ", access_token='" + access_token + '\'' +
-                ", secret='" + secret + '\'' +
+                ", accessToken='" + accessToken + '\'' +
                 '}';
     }
 }

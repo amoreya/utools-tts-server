@@ -27,7 +27,7 @@ public class ResourceDto implements Serializable {
     /**
      * 用户ID
      * */
-    private String open_id;
+    private String openId;
 
 
     /**
@@ -59,12 +59,12 @@ public class ResourceDto implements Serializable {
         this.nickname = nickname;
     }
 
-    public String getOpen_id() {
-        return open_id;
+    public String getOpenId() {
+        return openId;
     }
 
-    public void setOpen_id(String open_id) {
-        this.open_id = open_id;
+    public void setOpenId(String openId) {
+        this.openId = openId;
     }
 
     public Integer getTimestamp() {
@@ -81,7 +81,7 @@ public class ResourceDto implements Serializable {
                 "avatar='" + avatar + '\'' +
                 ", member=" + member +
                 ", nickname='" + nickname + '\'' +
-                ", open_id='" + open_id + '\'' +
+                ", openId='" + openId + '\'' +
                 ", timestamp=" + timestamp +
                 '}';
     }

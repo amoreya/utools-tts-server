@@ -1,4 +1,8 @@
-package com.huny.baidutts.model.dto;
+package com.huny.baidutts.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
@@ -7,17 +11,20 @@ import java.io.Serializable;
  * @date： Created in 2021/10/27 19:26
  * @description： 请求UTOOLS的参数实体类
  */
-public class BaseinfoDto implements Serializable {
+@ConfigurationProperties("utools")
+@Configuration
+@Component
+public class BaseinfoConfig implements Serializable {
 
     /**
      * 插件ID
      * */
-    private String plugin_id;
+    private String pluginId;
 
     /**
      * uTools 用户的 access_token
      * */
-    private String access_token;
+    private String accessToken;
 
     /**
      * 时间戳（秒），误差需小于 10 分钟
@@ -34,20 +41,20 @@ public class BaseinfoDto implements Serializable {
      * */
     private String secret;
 
-    public String getPlugin_id() {
-        return plugin_id;
+    public String getPluginId() {
+        return pluginId;
     }
 
-    public void setPlugin_id(String plugin_id) {
-        this.plugin_id = plugin_id;
+    public void setPluginId(String pluginId) {
+        this.pluginId = pluginId;
     }
 
-    public String getAccess_token() {
-        return access_token;
+    public String getAccessToken() {
+        return accessToken;
     }
 
-    public void setAccess_token(String access_token) {
-        this.access_token = access_token;
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 
     public String getTimestamp() {
@@ -77,8 +84,8 @@ public class BaseinfoDto implements Serializable {
     @Override
     public String toString() {
         return "BaseinfoDto{" +
-                "plugin_id='" + plugin_id + '\'' +
-                ", access_token='" + access_token + '\'' +
+                "pluginId='" + pluginId + '\'' +
+                ", accessToken='" + accessToken + '\'' +
                 ", timestamp='" + timestamp + '\'' +
                 ", sign='" + sign + '\'' +
                 ", secret='" + secret + '\'' +

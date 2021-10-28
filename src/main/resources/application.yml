@@ -2,7 +2,7 @@
 server:
   port: 2323
   servlet:
-    context-path: /baidutts
+    context-path: /
   tomcat:
     uri-encoding: UTF-8
     accesslog:
@@ -20,6 +20,16 @@ spring:
         max-idle: 10
         min-idle: 0
     timeout: 30000
+  datasource:
+    url: jdbc:mysql://47.243.171.80:3307/useinfo?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1228
+
+mybatis:
+  check-config-location: true
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
 
 #百度API的鉴权信息
 baidu:
@@ -27,9 +37,18 @@ baidu:
   api-Key:
   secret-Key:
 
+#utools插件信息
+utools:
+  #插件ID
+  plugin-id: zupkd21y
+  #插件的secret
+  secret: UQO05su8px1V3RyWl1ziLrY5w9x12UYp
+
 #系统每天的可用次数
 tts:
+  #APP每天可调用的次数
   app-total: 5000
+  #APP每个用户每天可调用的次数
   user-total: 50
 
 
