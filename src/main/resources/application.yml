@@ -21,10 +21,10 @@ spring:
         min-idle: 0
     timeout: 30000
   datasource:
-    url: jdbc:mysql://47.243.171.80:3307/useinfo?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://ip:port/useinfo?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 1228
+    username: 
+    password: 
 
 mybatis:
   check-config-location: true
